@@ -9,6 +9,6 @@ int main() {
 	cout << "Give me another one: "; 
 	cin >> b;
 
-	cout << "Sum: " << a + b << endl;
+	cout << "Product: " << a * b << endl;
 	return 0;
 }
