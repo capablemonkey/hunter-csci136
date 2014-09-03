@@ -1,3 +1,13 @@
+/******************************************************************************
+Title: Number Multiplier
+Author: Gordon Zheng
+Created on: 2014-09-02
+Description: Asks for 2 numbers and multiplies them.
+Usage: ./lab01c
+Build with: g++ lab01c.cpp -o lab01c
+Dependencies: none
+******************************************************************************/
+
 #include <iostream>
 using namespace std;
 
