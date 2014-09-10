@@ -52,8 +52,9 @@ int main() {
     cout << "Well, this is awkward.  Guess what?  You don't get a salary raise!";
   } else {
     cout.precision(2);    // round to 2 digits
-    cout << "Your new salary is: $" << fixed << newSalary << endl
-         << "Retroactive pay: $" << fixed << retroPayment << endl;
+    cout << "Retroactive pay: $" << fixed << retroPayment << endl
+         << "New salary: $" << fixed << newSalary << endl
+         << "Monthly salary: $" << fixed << (newSalary / 12) << endl;
   }
 
   return 0;
