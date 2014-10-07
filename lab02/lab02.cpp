@@ -32,7 +32,7 @@ int main() {
     newSalary = currentSalary * RAISE_RATE_TIER_1;
     // difference in yearly salary, divided by 2 (6 mo. retro):
     retroPayment = (newSalary - currentSalary) / 2;
-  } else if (currentSalary <= 30000.00) {
+  } else if (currentSalary < 30000.00) {
     newSalary = currentSalary * RAISE_RATE_TIER_2;
     // use special retro rate instead of new salary to calculate retro payment:
     retroPayment = ((currentSalary * RETRO_RATE_TIER_2) - currentSalary) / 2;
