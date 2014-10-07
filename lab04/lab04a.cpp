@@ -19,7 +19,7 @@ using namespace std;
 
 const float ANNUAL_INTEREST_RATE = 0.06;
 
-float computeFutureValue(float accountBalance, int compoundPeriodsPerYear, int years);
+float computeFutureValue(float accountBalance, int periodsPerYear, int years);
 
 int main() {
 	ifstream accountsFile("lab04a-data.txt");
@@ -36,11 +36,11 @@ int main() {
 		// use string stream to conveniently extract numbers:
 		istringstream buffer(line);
 		float accountBalance, futureValue;
-		int compoundPeriodsPerYear, years;
+		int periodsPerYear, years;
 
 		// if the line can't be coerced to float, int, int, it's an invalid line
 		// and we'll just assume we reached the end of the file and exit the loop.
-		if (!(buffer >> accountBalance >> compoundPeriodsPerYear >> years)) { break; }
+		if (!(buffer >> accountBalance >> periodsPerYear >> years)) { break; }
 
 		// output floats to 2 decimal places, show point:
 		cout.setf(ios::fixed);
@@ -50,15 +50,16 @@ int main() {
 		// print future value:
 		cout 	<< "$" << accountBalance << ", "
 					<< (ANNUAL_INTEREST_RATE * 100) << "% rate, "
-					<< "compounded " << compoundPeriodsPerYear << " times a year "
-					<< "for " << years << " years " 
-					<< "yields: $" << computeFutureValue(accountBalance, compoundPeriodsPerYear, years)
+					<< "compounded " << periodsPerYear << " times a year "
+					<< "for " << years << " years yields: $"
+					<< computeFutureValue(accountBalance, periodsPerYear, years)
 					<< endl;
 	}
 
 	return 0;
 }
 
-float computeFutureValue(float accountBalance, int compoundPeriodsPerYear, int years) {
-	return accountBalance * (pow(1 + (ANNUAL_INTEREST_RATE / compoundPeriodsPerYear), years * compoundPeriodsPerYear));
+float computeFutureValue(float accountBalance, int periodsPerYear, int years) {
+	return accountBalance * (
+		pow(1 + (ANNUAL_INTEREST_RATE / periodsPerYear), years * periodsPerYear));
 }
