@@ -39,7 +39,7 @@ int main() {
 		int periodsPerYear, years;
 
 		// if the line can't be coerced to float, int, int, it's an invalid line
-		// and we'll just assume we reached the end of the file and exit the loop.
+		// and we'll just stop here.
 		if (!(buffer >> accountBalance >> periodsPerYear >> years)) { break; }
 
 		// output floats to 2 decimal places, show point:
