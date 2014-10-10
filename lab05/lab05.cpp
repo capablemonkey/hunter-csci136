@@ -2,8 +2,8 @@
 Title: Fibonacci
 Author: Gordon Zheng
 Created on: 2014-10-09
-Description:  Calulates Fibonacci sequence iteratively up to P elements, where
-              the P-th element is larger than the maximum int value.
+Description:  Calulates Fibonacci sequence iteratively up to P - 1 elements, 
+              where the P-th element is larger than the maximum int value.
 
               Computes the Fibonacci sequence only once and stores it in a 
               vector in order to avoid having to compute the sequence each time 
@@ -60,7 +60,7 @@ int fib(int n) {
   return FIBONACCI_SEQUENCE[n - 1];
 }
 
-// returns a vector containing the Fibonacci sequence up to P elements,
+// returns a vector containing the Fibonacci sequence up to P - 1 elements,
 // where the P-th element is larger than the maximum int value.
 vector<int> generateFibonacci(void) {
   vector<int> sequence;
