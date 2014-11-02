@@ -1,3 +1,15 @@
+/******************************************************************************
+Title: Long Addition
+Author: Gordon Zheng
+Created on: 2014-10-09
+Description:    Adds numbers via long addition.  Can add numbers greater
+                than the max 32bit int value.
+              
+Usage: ./lab07
+Build with: g++ main.cpp bigint.cpp -o lab07
+Dependencies: none
+******************************************************************************/
+
 #include <iostream>
 #include "bigint.h"
 
