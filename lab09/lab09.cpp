@@ -3,8 +3,8 @@ Title: Fractions
 Author: Gordon Zheng
 Created on: 2014-11-16
 Description:    Implements rational fraction math  
-Usage: ./fraction
-Build with: g++ main.cpp fraction.cpp -o fraction
+Usage: ./lab09
+Build with: g++ lab09.cpp fraction.cpp -o lab09
 Dependencies: fraction.h
 ******************************************************************************/
 
