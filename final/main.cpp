@@ -59,6 +59,7 @@ int main(int argc, char *argv[]) {
 
   // parse file:
   while(inputFile) {
+    if (inputFile.eof()) { break; }
     inputFile >> firstName >> lastName >> grade;
     Student newStudent;
     newStudent.fullName = firstName + " " + lastName;
